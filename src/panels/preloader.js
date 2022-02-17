@@ -170,7 +170,7 @@ class Preloader extends React.Component{
 
 		return (
 			<div className="main_preloader" id="main_loader">
-			<div className="preloader_pop">
+			<div className="preloader_pop" id="but">
 				<div className="preloader_elem">{this.state.canvas}</div>
 			</div>
 			<div className="main_preloader_button" id= "mpb">

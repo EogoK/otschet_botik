@@ -30,7 +30,7 @@ class App extends React.Component {
 	constructor(props){
 		super(props);
 
-		this.state = {fetchedUser : null, element_main:null, activeView: "preloader", snackbar: null, update: null};
+		this.state = {fetchedUser : null, element_main:null, activeView: "preloader", snackbar: null, update: false, date: null};
 		this.snackbarFunc = this.snackbarFunc.bind(this);
 
 
@@ -52,9 +52,6 @@ class App extends React.Component {
 	return (
 		<AdaptivityProvider>
 			<AppRoot>
-			    <Root activeView={this.state.activeView}>
-					<View id="preloader">
-
 					{
 						!self.state.update &&
 						<Preloader self={self}/>
@@ -63,8 +60,6 @@ class App extends React.Component {
 						self.state.update &&
 						<AdaptiveBlock year={"50"} day={"00"} hour={"10"} min={"25"} sec={"19"}/>
 					}
-					</View>
-				</Root>
 				{this.state.snackbar}
 			</AppRoot>
 		</AdaptivityProvider>

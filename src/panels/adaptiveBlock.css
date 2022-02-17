@@ -22,22 +22,26 @@
 	}
 }
 
+@font-face{
+	font-family: "rar";
+	src:url("https://cors.eu.org/https://fonts-online.ru/sites/default/files/2021-07/coolvetica%20compressed%20rg.ttf");
+}
 
 #date{
 	position: absolute;
 	left: 50%;
-	margin-left: -100px;
+	margin-left: -30px;
 	color:white;
-	font-size: 160px;
-	font-family: Arial, sans-serif;
+	font-size: 120px;
+	font-family: "rar";
 }
 
 
 #sub_opt{
 
 	color:red;
-	font-size: 30px;
-	margin-top: 100px;
-	font-family: Arial, sans-serif;	
-	margin-left: 240px;
+	font-size: 50px;
+	margin-top: 50px;
+	font-family: "rar";	
+	margin-left: 160px;
 }
