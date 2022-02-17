@@ -1,0 +1,47 @@
+.main_preloader_button{
+		position:absolute;
+		top:0;
+		left:0;
+		bottom:0;
+		right:0;
+}
+
+.main_preloader_button > .elem{
+	position: absolute;
+    top: 50%;
+	left: 50%;
+	margin-left: -89px;
+	margin-top: -70px;
+
+	border:2px solid white;
+	border-radius: 8px;
+	color:white;
+	text-align: center;
+	padding: 20px;
+
+	transition: all ease 0.8s;
+	
+}
+
+
+
+.preloader_pop{
+	position:absolute;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+}
+
+.preloader_pop > .preloader_elem{
+	position: absolute;
+    top: 50%;
+	margin-left: -140px;
+	margin-top: -170px;
+}
+
+
+#preloader_elem{
+	transition: all ease 0.8s;
+	opacity: 0;
+}
