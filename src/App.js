@@ -46,6 +46,9 @@ class App extends React.Component {
 		});
 	}
 
+
+
+
 	render(){
 
 	var self = this;
@@ -58,7 +61,7 @@ class App extends React.Component {
 					}
 					{
 						self.state.update &&
-						<AdaptiveBlock year={"50"} day={"00"} hour={"10"} min={"25"} sec={"19"}/>
+						<AdaptiveBlock year={data["year"]} day={data["day"]} hour={data["hour"]} min={data["min"]} sec={data["sec"]}/>
 					}
 				{this.state.snackbar}
 			</AppRoot>

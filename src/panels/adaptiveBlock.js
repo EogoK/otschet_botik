@@ -37,7 +37,7 @@ class AdaptiveBlock extends React.Component{
 		var blocks = this.BlockToBlock();
 
 		return(
-			<div>
+			<div style={{textAlign: "center"}}>
 			{blocks}
 			</div>
 		);
