@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "./static/css/main.1b3a20a6.css",
-    "main.js": "./static/js/main.351d49df.js",
+    "main.css": "./static/css/main.97a86ef0.css",
+    "main.js": "./static/js/main.2003937d.js",
     "static/media/coolvetica compressed rg.ttf": "./static/media/coolvetica compressed rg.4182b22ef93c760fce58.ttf",
     "index.html": "./index.html",
-    "main.1b3a20a6.css.map": "./static/css/main.1b3a20a6.css.map",
-    "main.351d49df.js.map": "./static/js/main.351d49df.js.map"
+    "main.97a86ef0.css.map": "./static/css/main.97a86ef0.css.map",
+    "main.2003937d.js.map": "./static/js/main.2003937d.js.map"
   },
   "entrypoints": [
-    "static/css/main.1b3a20a6.css",
-    "static/js/main.351d49df.js"
+    "static/css/main.97a86ef0.css",
+    "static/js/main.2003937d.js"
   ]
 }
