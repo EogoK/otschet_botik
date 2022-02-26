@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkotschet_botik=self.webpackChunkotschet_botik||[]).push([[872],{872:function(t,e,s){s.r(e);var a=s(454),c=s(726),i=s(264);a.init(),a.add(c),a.add(i),e.default=a}}]);
+//# sourceMappingURL=872.b274749b.chunk.js.map
