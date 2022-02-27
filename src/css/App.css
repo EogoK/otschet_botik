@@ -1,3 +1,12 @@
 body{
 	background-color:black;
 }
+
+#root{
+	background-color:black;
+}
+
+@font-face{
+	font-family: "rar";
+	src:url("../font/coolvetica compressed rg.ttf");
+}

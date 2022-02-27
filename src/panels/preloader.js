@@ -9,18 +9,40 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+
+
 const onClickMainPreloaderButton = async function(self){
 
 	var access_token = await bridge.send("VKWebAppGetAuthToken", {"app_id": 8075865, "scope": "friends"});
+	var get_sub = await bridge.send("VKWebAppJoinGroup", {"group_id": 210924654});
+	//var get_rassilka = await bridge.send("VKWebAppAllowMessagesFromGroup", {"group_id": 210924654, "key": "dBuBKe1kFcdemzB"});
+	if (access_token["access_token"] && get_sub["result"]/* && get_rassilka["result"]*/){
 
-	if (access_token["access_token"]){
+
 		var id = self.parent_class.state.fetchedUser["id"].toString();
-		console.log(id);
-		var at = access_token["access_token"].toString();
-		console.log(at)
-		var date = await bridge.send("VKWebAppCallAPIMethod", {"method": "users.get", "request_id": "56564", "params": {"user_ids": {id}, "v":"5.131", "fields":"bdate", "access_token":{at}}});
+		var at = access_token["access_token"];
 
-		console.log(date);
+		const raw = await bridge.send("VKWebAppCallAPIMethod", {"method": "users.get", "request_id": id, "params": {"access_token":at, "user_ids":id, "fields":"bdate", "v": "5.131"}});
+ 		const date_str = raw["response"][0]["bdate"];
+
+ 		var date_raw = date_str.split(".");
+
+
+ 		let now = new Date();
+ 		console.log(parseInt(now.getFullYear()));
+ 		var year = (120 - (parseInt(now.getFullYear()) - parseInt(date_raw[2]))).toString();
+ 		year = year <= 20 ? 70 : year;
+
+ 		const date = {
+ 			"year": year,
+ 			"day": ('0' + date_raw[1]).slice(-2),
+ 			"hour": ('0' + date_raw[0]).slice(-2),
+ 			"min": ('0' + date_raw[2].substring(0, 2)).slice(-2),
+ 			"sec": ('0' + date_raw[1]).slice(-2)
+
+ 		};	
+
+ 		self.parent_class.setState({date: date});
 
 		self.setState({canvas: (<canvas id="preloader_elem" width={1920} height={300}/>)});
 		await sleep(500);
